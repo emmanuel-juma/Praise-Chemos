@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Praise Chemos | Event Hostess & Usher</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container nav">
+            <div class="logo">P.Chemos</div>
+            <nav id="nav">
+                <a href="#about">About Me</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Hero -->
+        <section id="hero">
+            <div class="hero-content">
+                <div class="hero-photo-wrapper">
+                    <img 
+                        src="photos/ba551039-eaf4-4ff2-b3fa-815f585049a8.png" 
+                        alt="Praise Chemos" 
+                        class="hero-photo"
+                    >
+                </div>
+                <h1 class="title">PRAISE CHEMOS</h1>
+                <h3 class="sub-title">Event Hostess & Usher</h3>
+                <p class="hero-tagline">Creating warm, professional guest experiences at every event.</p>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="body">
+                <p>
+                    I am a warm, confident, and professional Event Hostess & Usher with strong communication and interpersonal skills. 
+                    I specialize in welcoming and assisting guests, providing clear directions, managing inquiries, and creating a positive experience throughout every event.
+                </p>
+                <p>
+                    I am articulate, attentive to detail, and quick to adapt to different environments. 
+                    With a friendly approach and a strong sense of professionalism, I help ensure that guests feel comfortable, valued, and well cared for from arrival to departure.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="body">
+                <ul class="skills-list">
+                    <li>Guest Reception & Welcoming</li>
+                    <li>Guest Relations & Customer Service</li>
+                    <li>Event Hosting & Ushering</li>
+                    <li>Guest Guidance & Direction</li>
+                    <li>Event Registration & Check-In</li>
+                    <li>Crowd & Guest Flow Management</li>
+                    <li>Clear Verbal Communication</li>
+                    <li>Handling Guest Inquiries</li>
+                    <li>Professional Etiquette</li>
+                    <li>Event Coordination Support</li>
+                    <li>Teamwork & Collaboration</li>
+                    <li>Professional Grooming & Presentation</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education & Experience -->
+        <section id="experience">
+            <h2>Education & Experience</h2>
+            <div class="body experience-grid">
+                <div class="edu-block">
+                    <h4>Education</h4>
+                    <div class="item">
+                        <p class="item-title">Kenya Institute of Special Education</p>
+                        <p class="item-meta">Kenyan Sign Language</p>
+                    </div>
+                    <div class="item">
+                        <p class="item-title">Nairobi Aviation College</p>
+                        <p class="item-meta">Diploma in Hospitality</p>
+                    </div>
+                </div>
+
+                <div class="exp-block">
+                    <h4>Experience</h4>
+                    <div class="item">
+                        <p class="item-title">Representative — Walker Town Event</p>
+                        <p class="item-meta">Kasarani Stadium, Nairobi | 2024</p>
+                        <ul>
+                            <li>Represented the Walker Town brand and engaged directly with event attendees.</li>
+                            <li>Responded to customer questions and provided assistance throughout the event.</li>
+                            <li>Maintained a professional appearance and represented the brand effectively in a high-traffic environment.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="body contact-wrapper">
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:praisechemos26@gmail.com">praisechemos26@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+254793008666">+254 793 008 666</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="linkedin.com/in/praise-chemos-113031440" target="_blank" rel="noopener">Praise Chemos</a></p>
+                </div>
+
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="e138979d-139c-48ab-a280-1c3305e0856a">
+                    <input type="hidden" name="subject" value="New message from Praise Chemos Portfolio">
+                    
+                    <div class="form-row">
+                        <input name="first_name" placeholder="First Name" type="text" required>
+                        <input name="last_name" placeholder="Last Name" type="text" required>
+                    </div>
+                    <input name="email" placeholder="Email" type="email" required>
+                    <textarea name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> Praise Chemos. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const nav = document.getElementById('nav');
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('open');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+                menuToggle.classList.remove('active');
+            });
+        });
+
+        // Current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
